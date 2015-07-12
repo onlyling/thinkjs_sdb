@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="index ui-layout">
+	<div class="banner" id="banner">
+		<ul >
+			<li><img src="/assets/img/banner1.jpg" /></li>
+			<li><img src="/assets/img/banner2.jpg" /></li>
+			<li><img src="/assets/img/banner3.jpg" /></li>
+		</ul>
+	</div>
+	<div class="box">
+		<h2 class="title">推荐美食</h2>
+		<div class="nodata text-center">暂时没有推荐的美食，点击查看<a href="/food" title="美食列表">美食列表</a></div>
+	</div>
+	<div class="box">
+		<h2 class="title">推荐餐店</h2>
+		<div class="nodata text-center">暂时没有推荐的餐点，点击查看<a href="/shop" title="餐点列表">餐点列表</a></div>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.unslider.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#banner').unslider({
+			speed: 500,
+			delay: 3000,
+			keys: true,
+			dots: true,
+			fluid: false
+		});
+	});
+</script>
+</body>
+</html>

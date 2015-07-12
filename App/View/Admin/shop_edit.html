@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/admin_head.html %>
+</head>
+<body>
+<% include ../Common/admin_nav.html %>
+<div class="admin-main">
+	<h1 class="h1"><%=title%></h1>
+	<form class="shop" action="/admin/shop/edit" method="POST" id="addForm">
+		<input type="hidden" name="id" id="id" value="<%=shop.id%>" />
+		<ul class="ul">
+			<li>
+				<label class="hd" for="name">餐店名称：</label>
+				<input type="text" name="name" id="name" class="ui-text" value="<%=shop.name%>" />
+			</li>
+			<li>
+				<label class="hd" for="tel">电话号码：</label>
+				<input type="text" name="tel" id="tel" class="ui-text" value="<%=shop.tel%>" />
+			</li>
+			<li>
+				<label class="hd" for="address">联系地址：</label>
+				<input type="text" name="address" id="address" class="ui-text" value="<%=shop.address%>" />
+			</li>
+			<li>
+				<label class="hd" for="logo">餐店LOGO：</label>
+				<input type="file" name="upLogo" id="upLogo" class="ui-text" />
+				<img src="<%=shop.logo%>" id="imgLogo" class="img-logo" />
+				<input type="hidden" name="logo" id="logo" value="<%=shop.logo%>" />
+			</li>
+			<li>
+				<label class="hd" for="cover">餐店封面：</label>
+				<input type="file" name="upCover" id="upCover" class="ui-text"/>
+				<img src="<%=shop.cover%>" id="imgCover" class="img-cover" />
+				<input type="hidden" name="cover" id="cover" value="<=%shop.cover%>" >
+			</li>
+			<li>
+				<label class="hd" for="intro">餐店简介：</label>
+				<textarea name="intro" id="intro" class="ui-textarea"><%=shop.intro%></textarea>
+			</li>
+			<li>
+				<label class="hd"></label>
+				<input type="submit" class="ui-btn" value="确认修改" />
+			</li>
+		</ul>
+	</form>
+</div>
+
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets//js/admin/shop.min.js"></script>
+
+</body>
+</html>

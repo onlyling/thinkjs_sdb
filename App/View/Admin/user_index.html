@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/admin_head.html %>
+</head>
+<body>
+<% include ../Common/admin_nav.html %>
+<div class="admin-main">
+	<h1 class="h1">会员管理<span class="subh1" id="add">添加会员</span></h1>
+	<table class="ui-table" id="usersTable">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>用户名</th>
+				<th>邮箱</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%if(users.length){%>
+				<% users.forEach(function(user){ %>
+				<tr>
+					<td><%=user.id%></td>
+					<td><%=user.name%></td>
+					<td><%=user.email%></td>
+					<td><span class="edit">编辑</span><span class="del">删除</span></td>
+				</tr>
+				<% }); %>
+			<%}else{%>
+				<tr id="nousers">
+					<td colspan="4">暂时没有人注册成为会员</td>
+				</tr>
+			<%}%>
+		</tbody>
+	</table>
+	<% include ../Common/common_pager.html %>
+</div>
+
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets//js/admin/user.min.js"></script>
+
+</body>
+</html>

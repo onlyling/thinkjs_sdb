@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="user ui-layout">
+	<% include ../Common/user_sidebar.html %>
+	<div class="user-main">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>数量</th>
+					<th>订单号</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%if(order.length){
+					order.forEach(function(item){
+				%>
+				<tr>
+					<td><%=item.num%></td>
+					<td><%=item.imei%></td>
+				</tr>
+				<%})}else{%>
+				<tr>
+					<td colspan="2">还没有订单信息，现在就去下单，查看<a href="/food" title="美食列表">美食</a></td>
+				</tr>
+				<%}%>
+			</tbody>
+		</table>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+</body>
+</html>

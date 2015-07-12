@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="shop ui-layout">
+	<div class="header">
+		<img src="<%=shop.logo%>" alt="<%=shop.name%>" title="<%=shop.name%>" class="logo" />
+		<span class="title">
+			<h2 class="name"><%=shop.name%></h2>
+			<p><%=shop.address%></p>
+		</span>
+	</div>
+	<div class="sold box">
+		<h3 class="title">正在出售</h3>
+		<table class="table">
+			<tbody>
+				<%if(foods.length){
+					foods.forEach(function(food){
+				%>
+				<tr>
+					<td><img src="<%=food.banner.split(',')[0]%>" alt="<%=food.name%>" /><%=food.name%></td>
+					<td><%=food.intro%></td>
+					<td class="em">&yen;<em><%=food.price%></em></td>
+					<td><a href="/food/item?id=<%=food.id%>" class="ui-btn">立即订购</a></td>
+				</tr>
+				<%});}else{%>
+				<tr>
+					<td colspan="4" class="nofood">暂时没有推出美食</td>
+				</tr>
+				<%}%>
+			</tbody>
+		</table>
+	</div>
+	<div class="details box">
+		<h3 class="title">餐店详情</h3>
+		<div class="ctt">
+			<img src="<%=shop.cover%>" title="<%=title%>" alt="<%=title%>" class="img" />
+			<span class="text"><%=shop.intro%></span>
+		</div>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+</body>
+</html>

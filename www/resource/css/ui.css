@@ -1,0 +1,252 @@
+@charset "utf-8";
+/*
+ *url(http://www.ituring.com.cn/article/49353)
+ */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{ margin:0; padding:0;}
+table{ border-collapse:collapse; border-spacing:0;}
+fieldset, img{ border:0;}
+address, caption, cite, code, dfn, em, strong, th, var{ font-style:normal; font-weight:normal;}
+ol, ul{ list-style:none;}
+caption, th { text-align:left;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-weight:normal;}
+q::before, q::after{ content:'';}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary{ display: block;}
+audio, canvas, video{ display:inline-block;}
+a{ text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent;}
+a:focus { outline:thin dotted;}
+a:active, a:hover{ outline: 0;}
+abbr[title]{ border-bottom: 1px dotted;}
+b, strong{ font-weight: bold;}
+dfn{ font-size:italic;}
+hr{ -moz-box-sizing: content-box; box-sizing: content-box; height: 0;}
+mark{ background: #ff0; color: #000;}
+code, kbd, pre, samp{ font-family: monospace, serif; font-size: 1em;}
+pre{ white-space: pre-wrap;}
+sub, sup{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup{ top: -0.5em;}
+sub{ bottom: -0.25em;}
+small{ font-size: 85%;}
+strong{ font-weight: bold;}
+em{ font-style: italic;}
+cite{ font-style: normal;}
+button, input, select, textarea{ font-family: inherit; color: inherit; font-size: 100%; margin: 0;}
+button, select{ text-transform: none;}
+button, html input[type="button"], input[type="reset"], input[type="submit"]{ -webkit-appearance: button; cursor: pointer;}
+button[disabled], html input[disabled]{ cursor: default;}
+input[type="checkbox"], input[type="radio"]{ box-sizing: border-box; padding: 0;}
+input[type="search"]{ -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration{ -webkit-appearance: none;}
+button::-moz-focus-inner, input::-moz-focus-inner{ border: 0; padding: 0;}
+textarea{ overflow: auto; vertical-align: top;}
+html{ height: 100%;}
+body{ height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch;}
+/*ui*/
+.ui-btn, .ui-dpib, span, i, label{ border: 0; display: inline-block; *display: inline; *zoom: 1; *overflow: visible; font-style: normal;}
+.ui-fl{ float: left;}
+.ui-fr{ float: right;}
+.ui-layout{ width: 1200px; margin-left: auto; margin-right: auto;}
+.ui-text{ width: 150px; padding: 5px 8px; border: 1px solid #efefef; font-family: inherit;}
+.ui-btn{ cursor: pointer; font-family: inherit;}
+.ui-split{ vertical-align: middle; margin: 0 10px;}
+/*pager*/
+.ui-pager{ display: block; height: 30px; line-height: 30px; padding-top: 20px; padding-bottom: 40px;}
+.ui-pager li{ margin: 0 5px; display: inline-block; *display: inline; *zoom: 1; *overflow: visible; font-style: normal; vertical-align: middle;}
+.ui-pager li a{ display: block; background-color: #f90; color: #fff; padding: 0 10px;  border-radius: 5px;}
+.ui-pager li.active a{ background-color: #f60;}
+/*低版本IE*/
+.text-center{ text-align: center;}
+.ui-ie-update{ width: 100%; padding: 10px 0; line-height: 16px; background-color: #fce9cf; color: #915808; left: 0;}
+.ui-ie-update a{ color: #5bc0de;}
+.ui-ie-update a:hover{ color: #005982;}
+
+/*home*/
+.home-top{ height: 40px; line-height: 40px; border-bottom: 1px solid #d7d7d7; color: #333; background-color: #f9f9f9;}
+.home-top a{ color: #333;}
+.home-top .collect{ margin-right: 20px; cursor: pointer;}
+.home-top .collect i{ font-size: 20px; vertical-align: middle; color: #f90; margin-right: 5px;}
+.home-top .center{ position: relative; vertical-align: top; width: 85px;}
+.home-top .center:hover .more{ display: block;}
+.home-top .more{ display: none; position: absolute; left: -20px; top: 40px; z-index: 99; width: 115px; text-align: center; background-color: #f9f9f9; border: 1px solid #d7d7d7;}
+
+.home-logo{ height: 160px; padding-top: 20px;}
+.home-logo .logo{ margin-left: 100px; width: 100px; height: 110px; background-image: url(../img/logo.jpg);}
+.home-logo .logo a{ display: block; width: 100px; height: 110px; text-indent: -999999px;}
+.home-logo .seach{ position: relative; margin-top: 30px; margin-right: 130px; width: 700px; height: 35px; line-height: 35px; border: 1px solid #f90;}
+.home-logo .seach .ui-text{ border: 0; outline: none; width: 580px; padding: 0 5px;}
+.home-logo .seach .ui-btn{ position: absolute; right: 0; top: 0; display: block; border: 0; width: 110px; height: 35px; text-align: center; background-color: #f90; color: #333;}
+.home-logo .seach .ui-btn:hover{ color: #fff;}
+
+.home-nav{ height: 40px; line-height: 40px; background-color: #f90;}
+.home-nav li{ float: left; width: 110px; text-align: center;}
+.home-nav a{ display: block; color: #fff;}
+.home-nav a:hover{ background-color: #f60; color: #fff;}
+
+.home-ft{ text-align: center; background-color: #000; color: #fff; padding: 20px 0;}
+.home-ft a{ color: #fff;}
+.home-ft a:hover{ color: #fff;}
+
+/*register*/
+.register .header{ height: 110px; border-bottom: 3px solid #f90;}
+.register .header .logo{ padding-left: 100px; padding-top: 50px; height: 60px; line-height: 60px; background: url(../img/logo.jpg) 0 0 no-repeat;}
+.register .header .logo a{ color: #999;}
+.register .header .logo a:hover{ color: #000; text-decoration: underline;}
+.register .header .tologin{ height: 30px;; margin-top: 65px;}
+.register .header .tologin .ui-btn{ width: 60px; height: 30px; line-height: 30px; margin-left: 20px; text-align: center; background-color: #f90; color: #fff;}
+
+.register .nav{ border-bottom: 2px solid #ccc;  height: 40px; margin-bottom: 10px;}
+.register .nav li{ float: left;  height: 40px; line-height: 40px; width: 160px; text-align: center; cursor: pointer; border-bottom: 2px solid #ccc;}
+.register .nav li.on{ border-bottom: 2px solid #f90;}
+
+.register .ul{ padding-top: 20px;}
+.register .ul label{ width: 160px; text-align: right; margin-right: 10px;}
+.register .ul li{ margin-bottom: 15px;}
+.register .ul .ui-btn{ width: 140px; font-size: 20px; height: 35px; line-height: 35px;  color: #fff; background-color: #f90; border: 0;}
+
+.register .items{ min-height: 400px;}
+.register .items .item{ display: none;}
+.register .items .item.on{ display: block;}
+
+/*list*/
+.list{ overflow: hidden;}
+.list .column{ font-size: 20px; line-height: 40px; border-bottom: 3px solid #f90; color: #f90; padding-left: 20px; margin-top: 20px;}
+
+.list .sidebar{ width: 300px; margin-top: 30px;}
+.list .sidebar .title{ border: 1px solid #f90; height: 30px; line-height: 30px; padding: 0 10px; color: #f90;}
+.list .sidebar .ul{ border: 1px solid #efefef; border-top: 0; padding: 20px 10px 10px;}
+.list .sidebar .ul  li{ margin-bottom: 10px;}
+.list .sidebar .ul  li.nodata a{ color: #f90;}
+.list .sidebar .ul .img{ width: 80px; height: 50px; vertical-align: top;}
+.list .sidebar .ul .text{ width: 180px; vertical-align: top;}
+.list .sidebar .ul .text a{ color: #333;}
+.list .sidebar .ul .text p{ color: #666; font-size: 12px;}
+
+.list .list-main{ width: 880px; margin-top: 30px;  overflow: hidden;}
+.list .list-main .ul{ width: 900px; overflow: hidden;}
+.list .list-main .ul li{ float: left; width: 278px; border: 1px solid #efefef; margin-right: 20px; margin-bottom: 20px;}
+.list .list-main .ul li:hover{ border: 1px solid #f90;}
+.list .list-main .ul em{ font-style: normal; color: #f90; font-size: 20px; font-weight: 700;}
+.list .list-main .ul .img{ display: block; width: 278px; height: 170px; margin-bottom: 10px; overflow: hidden;}
+.list .list-main .ul .img img{ display: block; width: inherit; height: inherit; transition: all 0.5s;}
+.list .list-main .ul li:hover .img img{ transform: scale(1.1,1.1);}
+.list .list-main .ul .link{ color: #333; line-height: 20px; margin: 0 10px;}
+.list .list-main .ul .link:hover{ color: #f60;}
+.list .list-main .ul p{ color: #666; line-height: 20px; margin: 5px 10px; height: 40px; overflow: hidden;}
+.list .list-main .ul p.ft{ border-top: 1px solid #efefef; background-color: #f5f5f5; margin: 0; padding: 0 10px; line-height: 30px;}
+
+/*shop*/
+.shop{ margin-top: 30px;}
+.shop .header{ padding: 20px; border: 1px solid #ddd;}
+.shop .header .logo{ height: 70px; width: 70px; vertical-align: top;}
+.shop .header .title{ margin-left: 10px; color: #666; line-height: 20px; vertical-align: top;}
+.shop .header .title .name{ font-size: 24px; line-height: 40px; color: #333;}
+
+.shop .box{ margin-top: 20px;}
+.shop .box .title{ line-height: 40px; border-bottom: 2px solid #f90; color: #f90;}
+
+.shop .sold .table{ width: 100%;}
+.shop .sold .table tr{ border-bottom: 1px solid #efefef;}
+.shop .sold .table td{ line-height: 30px; padding: 10px 0; width: 25%;}
+.shop .sold .table td.em{ color: #f90;}
+.shop .sold .table td.nofood{ text-align: center;}
+.shop .sold .table em{ font-size: 24px; font-style: normal; margin-left: 10px;}
+.shop .sold .table img{ height: 80px; vertical-align: middle;}
+.shop .sold .table .ui-btn{ background-color: #f90; color: #fff; padding: 5px 25px;}
+.shop .sold .table .ui-btn:hover{ background-color: #f60; color: #fff;}
+
+.shop .details .ctt{ padding: 20px 0;}
+.shop .details .img{ width: 470px; height: 280px; vertical-align: top;}
+.shop .details .text{ margin-left: 50px; width: 500px;}
+
+/*food*/
+.food{ margin-top: 30px;}
+.food .header{ font-size: 30px; color: #000; line-height: 40px;}
+.food .header .subtitle{ display: block; font-size: 16px; color: #666; line-height: 20px;}
+
+.food .intro{ overflow: hidden; margin-top: 20px; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 2px solid #ccc; box-shadow: 0px 3px 5px rgba(0,0,0,0.1);}
+.food .intro .banner{ position: relative;}
+.food .intro .banner .mark{ position: absolute; left: 0; top: 0; background-color: #f90; color: #fff; padding: 5px 10px;}
+.food .intro .img{ width: 390px; height: 290px; margin: 5px;}
+.food .intro .imgs{ margin-top: 10px;}
+.food .intro .imgs img{ width: 70px; height: 70px; margin: 0 5px; border: 1px solid #f5f5f5; cursor: pointer;}
+.food .intro .imgs img:hover{ border: 1px solid #f90;}
+
+.food .buy{ width: 700px;}
+.food .buy em{ color: #f90; font-style: normal; margin: 0 5px;}
+.food .buy p{ line-height: 30px; margin-bottom: 20px;}
+.food .buy .hd{ line-height: 40px;}
+.food .buy .ul{ padding: 0 20px; border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; }
+.food .buy .ul .ui-split{ margin: 0 30px;}
+.food .buy .text{ width: 25px; padding: 5px 8px; vertical-align: middle;}
+.food .buy .ui-btn{ background-color: #f90; color: #fff; padding: 0 20px; line-height: 30px; font-size: 18px; border-radius: 3px;}
+
+.food .box .title{line-height: 50px; border-bottom: 2px solid #333; font-size: 20px;}
+.food .box .q{ background-color: #f5f5f5; border-left: 4px solid #f60; line-height: 40px; padding-left: 10px; font-size: 16px; color: #000; margin: 10px 0;}
+
+.food .know .table{ width: 100%; border: 1px solid #efefef;}
+.food .know .table th{ width: 200px; padding-left: 10px; line-height: 40px; background-color: #f5f5f5; border: 1px solid #efefef;}
+.food .know .table td{ padding-left: 10px; border: 1px solid #efefef;}
+.food .know .table ul{ list-style: disc inside; line-height: 30px;}
+
+.food .details .table{ width: 100%;}
+.food .details .table th{ background-color: #f5f5f5; line-height: 40px; font-size: 16px; padding-left: 10px;}
+.food .details .table td{ line-height: 30px; padding-left: 10px;}
+.food .details .table tbody tr{ border-bottom: 1px solid #efefef}
+
+.food .share img{ max-width: 100%;}
+
+/*order*/
+.order .ui-btn{ background-color: #f90; color: #fff; padding: 5px 10px;}
+.order{ margin-top: 30px;}
+.order .header{font-size: 16px; color: #000; line-height: 40px;}
+.order .table{ border: 1px solid #f90; width: 100%;}
+.order .table th{ padding-left: 20px; line-height: 30px; background-color: #f90; color: #fff;}
+.order .table td{ padding-left: 20px; line-height: 30px;}
+.order .table img{ height: 180px; vertical-align: middle;}
+
+.order .btns{ text-align: right; padding: 20px 0;}
+
+.order .pay{ display: none; position: fixed; left: 50%; top: 40%; margin-left: -300px; width: 600px;  padding-bottom: 20px; border: 1px solid #efefef; background-color: #fff;}
+.order .pay.on{ display: block;}
+.order .pay .x{ position: absolute; right: 0; top: 0; width: 30px; height: 30px; line-height: 30px; text-align: center; cursor: pointer;}
+.order .pay .hd{ height: 30px; line-height: 30px; margin: 10px 20px; border-bottom: 2px solid #f90;}
+.order .pay .ul{ margin: 0 20px; padding-bottom: 20px;}
+.order .pay .ul label{ margin-left: 10px; cursor: pointer;}
+.order .pay .ui-btn{ margin: 0 20px;}
+
+.order.success{ width: 600px; margin: 0 auto;}
+
+/*index*/
+.index .banner{ position: relative; overflow: hidden; height: 400px;}
+.index .banner ul li{ float: left;}
+.index .banner ul img{ height: 400px;}
+.index .banner .dots{ position: absolute; bottom: 20px; left: 40%;}
+.index .banner .dots li{ float: left; margin: 0 5px; width: 20px; height: 20px; text-indent: -99999px; background-color: #ccc; border-radius: 10px; cursor: pointer; box-shadow: 1px 2px 3px rgba(0,0,0,0.3);}
+.index .banner .dots li.active{ background-color: #f60;}
+
+.index .box{ margin-top: 20px;}
+.index .box .title{ line-height: 50px; border-bottom: 2px solid #f90; color: #f90;}
+.index .box .nodata{ padding: 20px;}
+.index .box .nodata a{ color: #f90; text-decoration: underline;}
+
+
+/*user*/
+.user{ margin-top: 30px; padding-bottom: 30px;}
+.user .sidebar{ border: 1px solid #f90; width: 200px; min-height: 400px;}
+.user .sidebar li{ border-top: 1px solid #f90; line-height: 39px; text-align: center;}
+.user .sidebar li.hd{ border-top: 0;}
+.user .sidebar a{ color: #333;}
+.user .sidebar a:hover{ color: #000;}
+
+.user .user-main{ overflow: hidden; border: 1px solid #f90; border-left: 0; min-height: 360px; padding: 20px;}
+.user .table{ width: 100%;}
+.user .table thead{ background-color: #f90; color: #fff;}
+.user .table th, .user .table td{ padding-left: 10px; line-height: 30px;}
+.user .ui-btn{ width: 120px; height: 30px; line-height: 30px; background-color: #f90; color: #fff;}
+.user .ui-btn:hover{ background-color: #f60; color: #fff;}
+.user .ui-btn:disabled{ background-color: #333;}
+.user .ui-text{ width: 240px;}
+.user .ui-text.err{ border-color: #f30;}
+
+
+.user .set .ul label{ width: 100px; text-align: right;}
+.user .set .ul li{ margin-bottom: 10px;}

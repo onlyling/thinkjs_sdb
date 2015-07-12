@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="order ui-layout">
+	<h2 class="header">
+		<%=title%>
+	</h2>
+	<div class="success">
+		<p class="hd">您已成功预订</p>
+		<p>请在今天内，使用以下订单号</p>
+		<p><%=imei%></p>
+		<p>到<span><%=address%></span>领取餐品</p>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/order.min.js"></script>
+</body>
+</html>

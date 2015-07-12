@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="user ui-layout">
+	<% include ../Common/user_sidebar.html %>
+	<div class="user-main set">
+		<ul class="ul">
+			<li>
+				<label>用户名：</label>
+				<%=userInfo.name%>
+			</li>
+			<li>
+				<label for="npwd">新密码：</label>
+				<input type="password" name="npwd" id="npwd" class="ui-text" />
+			</li>
+			<li>
+				<label for="email">邮箱：</label>
+				<input type="text" name="email" id="email" class="ui-text" placeholder="<%=userInfo.email%>" />
+			</li>
+			<li>
+				<label for="pwd">密码：</label>
+				<input type="password" name="pwd" id="pwd" class="ui-text" placeholder="输入密码，修改信息" />
+			</li>
+			<li>
+				<label for="btn"></label>
+				<input type="hidden" id="id" value="<%=userInfo.id%>" />
+				<input type="button" class="ui-btn" value="修改" id="btn" />
+			</li>
+		</ul>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/user.set.min.js"></script>
+
+</body>
+</html>

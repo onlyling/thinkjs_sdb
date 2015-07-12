@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/admin_head.html %>
+</head>
+<body>
+<% include ../Common/admin_nav.html %>
+<div class="admin-main">
+	<h1 class="h1"><%=title%><a href="/admin/food/add" class="subh1">添加美食</a></h1>
+	<table class="ui-table" id="foodsTable">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>美食名称</th>
+				<th>价格</th>
+				<th>销量</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%if(foods.length){%>
+				<%foods.forEach(function(food){%>
+					<tr>
+						<td><%=food.id%></td>
+						<td><%=food.name%></td>
+						<td><%=food.price%></td>
+						<td><%=food.sold%></td>
+						<td><span><a href="/admin/food/edit?id=<%=food.id%>">编辑</a></span><span class="del">删除</span></td>
+					</tr>
+				<%});%>
+			<%}else{%>
+				<tr id="nofoods">
+					<td colspan="5">暂时没有美食上架，刷新页面试试</td>
+				</tr>
+			<%}%>
+		</tbody>
+	</table>
+	<% include ../Common/common_pager.html %>
+</div>
+
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets//js/admin/food.min.js"></script>
+
+</body>
+</html>

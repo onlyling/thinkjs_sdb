@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/admin_head.html %>
+</head>
+<body>
+<% include ../Common/admin_nav.html %>
+<div class="admin-main">
+	<h1 class="h1"><%=title%><a href="/admin/shop/add" class="subh1">添加餐店</a></h1>
+	<table class="ui-table" id="shopsTable">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>店名</th>
+				<th>地址</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%if(shops.length){%>
+				<%shops.forEach(function(shop){%>
+					<tr>
+						<td><%=shop.id%></td>
+						<td><%=shop.name%></td>
+						<td><%=shop.address%></td>
+						<td><span><a href="/admin/shop/edit?id=<%=shop.id%>">编辑</a></span><span class="del">删除</span></td>
+					</tr>
+				<%});%>
+			<%}else{%>
+				<tr id="noshops">
+					<td colspan="4">暂时没有餐店入驻，刷新页面试试</td>
+				</tr>
+			<%}%>
+		</tbody>
+	</table>
+	<% include ../Common/common_pager.html %>
+</div>
+
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets//js/admin/shop.min.js"></script>
+
+</body>
+</html>

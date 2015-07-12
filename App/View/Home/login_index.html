@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body class="register">
+<div class="header">
+	<div class="ui-layout">
+		<h1 class="logo ui-fl">登录<%=siteName%>账号<span class="split">|</span><a href="/" title="返回首页">返回首页</a></h1>
+		<span class="tologin ui-fr">没有<%=siteName%>账号?<a href="/register" title="注册" class="ui-btn">注册</a></span>
+	</div>
+</div>
+<ul class="nav ui-layout" id="nav">
+	<li class="on">邮箱登录</li>
+	<li>手机登录</li>
+</ul>
+<div class="items ui-layout" id="items">
+	<div class="item on">
+		<form id="emailLog" action="/login" method="POST">
+			<ul class="ul">
+				<li>
+					<label for="name">用户名</label>
+					<input type="text" name="name" id="name" class="ui-text" />
+				</li>
+				<li>
+					<label for="pwd">登录密码</label>
+					<input type="password" name="pwd" id="pwd" class="ui-text" />
+				</li>
+				<li>
+					<label for="reg"></label>
+					<input type="submit" name="reg" id="login" class="ui-btn" value="登录" />
+				</li>
+				<li>
+					<label></label><span id="err"></span>
+				</li>
+			</ul>
+		</form>
+	</div>
+	<div class="item">
+		<p>暂时不提供手机登录方式</p>
+	</div>
+</div>
+
+<% include ../Common/home_footer.html %>
+
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets/js/login.min.js"></script>
+
+</body>
+</html>

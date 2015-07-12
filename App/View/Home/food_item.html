@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="food ui-layout">
+	<h2 class="header">
+		<%=food.name%><span class="subtitle"><%=food.intro%></span>
+	</h2>
+	<div class="intro">
+		<div class="banner ui-fl" id="banner">
+			<div class="mark">多套餐</div>
+			<img src="" class="img" />
+			<div class="imgs">
+				<%
+				var banner = food.banner.split(',');
+				for(var i = 0, length = banner.length; i < length; i++){
+				%>
+				<img src="<%=banner[i]%>"/>
+				<%}%>
+			</div>
+		</div>
+		<div class="buy ui-fr">
+		<form action="/order" method="POST">
+			<h3 class="hd">预订价：&yen;<em><%=food.price%></em><span class="ui-fr"></span></h3>
+			<p class="ul">已售：<em><%=food.sold%></em>份<span class="ui-split">|</span><em>5</em>分</p>
+			<p>有效期：当天有效</p>
+			<p>数量：<input type="text" class="text" name="num" value="1" /></p>
+			<input type="hidden" name="id" value="<%=food.id%>" />
+			<input type="hidden" name="shopid" value="<%=food.shopid%>" />
+			<input type="hidden" name="address" value="<%=address%>">
+			<p>
+				<%if(isLogin){%>
+					<input type="submit" class="ui-btn" value="立即抢团" />
+				<%}else{%>
+				<a href="/login" title="用户登录" class="ui-btn">用户登录</a>
+				<%}%>
+			</p>
+		</form>
+		</div>
+	</div>
+	<div class="know box">
+		<h3 class="title">购买须知</h3>
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>有效期</th>
+					<td>预定当天有效</td>
+				</tr>
+				<tr>
+					<th>用餐地点</th>
+					<td><%=address%></td>
+				</tr>
+				<tr>
+					<th>使用时间</th>
+					<td>预定当天使用</td>
+				</tr>
+				<tr>
+					<th>使用方法</th>
+					<td>在有效期内到对应的餐店领取餐品</td>
+				</tr>
+				<tr>
+					<th>使用规则</th>
+					<td>
+						<ul>
+							<li>所有价格都以餐店实际价格为主；</li>
+							<li>凭编号与餐店兑换餐品；</li>
+							<li>食堂外带均可，餐品如需打包，打包费以餐店实际收费为准；</li>
+							<li>餐品与订单不符合，请与餐店联系。</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="details box">
+		<h3 class="title">套餐详情</h3>
+		<h4 class="q">随便吃，可以加饭</h4>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>套餐内容</th>
+					<th>价格</th>
+					<th>数量</th>
+				</tr>
+			</thead>
+			<tbody>
+			<%
+			var items = food.setmeal.split(',');
+			for(var i = 0, length = items.length; i < length; i++){
+				var item = items[i].split('|');
+			%>
+				<tr>
+					<td><%=item[0]%></td>
+					<td><%=item[1]%></td>
+					<td><%=item[2]%></td>
+				</tr>
+			<%}%>
+			</tbody>
+		</table>
+		<h4 class="q">美味分享</h4>
+		<%
+		var imgs = food.content.split(',');
+		for(var i = 0, length = imgs.length; i < length; i++){
+		%>
+		<img data-src="<%=imgs[i]%>" alt="<%=food.name%>" class="lazy" />
+		<%}%>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="/assets/js/food.min.js"></script>
+</body>
+</html>

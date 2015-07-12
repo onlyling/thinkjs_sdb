@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="list ui-layout">
+	<h2 class="column"><%=title%></h2>
+	<% include ../Common/home_food_like.html %>
+	<div class="list-main ui-fl">
+		<%if(foods.length){%>
+		<ul class="ul">
+			<%foods.forEach(function(food){%>
+			<li>
+				<a href="/food/item?id=<%=food.id%>" title="<%=food.name%>" class="img">
+					<img src="<%=food.banner.split(',')[0]%>?sdb201506" alt="<%=food.name%>" title="<%=food.name%>" />
+				</a>
+				<a href="/food/item?id=<%=food.id%>" title="<%=food.name%>" class="link"><%=food.name%></a>
+				<p><%=food.intro%></p>
+				<p><em>&yen;<%=food.price%></em></p>
+				<p class="ft">已售：<%=food.sold%>份</p>
+			</li>
+			<%});%>
+		</ul>
+		<%} else {%>
+		<div class="nodata text-center">暂时没有美食信息，请刷新页面试试~</div>
+		<%}%>
+		<% include ../Common/common_pager.html %>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+</body>
+</html>

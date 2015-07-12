@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="list ui-layout">
+	<h2 class="column"><%=title%></h2>
+	<% include ../Common/home_food_like.html %>
+	<div class="list-main ui-fl">
+		<%if(shops.length){%>
+		<ul class="ul">
+			<%shops.forEach(function(shop){%>
+			<li>
+				<a href="/shop/item?id=<%=shop.id%>" title="<%=shop.name%>" class="img">
+					<img src="<%=shop.cover%>?sdb201506" alt="<%=shop.name%>" title="<%=shop.name%>" />
+				</a>
+				<a href="/shop/item?id=<%=shop.id%>" title="<%=shop.name%>" class="link"><%=shop.name%></a>
+				<p><%=shop.intro%></p>
+			</li>
+			<%});%>
+		</ul>
+		<%} else {%>
+		<div class="nodata text-center">暂时没有餐店信息，请刷新页面试试~</div>
+		<%}%>
+		<% include ../Common/common_pager.html %>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+</body>
+</html>

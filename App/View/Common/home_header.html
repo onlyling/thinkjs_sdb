@@ -1,0 +1,41 @@
+<!--[if lte IE 8]>
+<div class="fixednav ui-ie-update text-center ie-update">你正在使用IE低级浏览器，为了您的网络安全和更好的产品体验，<br />强烈建议您立即 <a class="blue" href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank">升级IE浏览器</a> 或者用更快更安全的 <a class="blue" href="https://www.google.com/intl/zh-CN/chrome/browser/?hl=zh-CN" target="_blank">谷歌浏览器Chrome</a> 。</div>
+<![endif]-->
+<div class="home-top">
+	<div class="ui-layout">
+	<% if(isLogin){%>
+		<div class="ui-fl">
+			<span class="collect"><i>&hearts;</i>收藏<%=siteName%></span>
+			<a href="/user" title="用户中心"><%=userInfo.name%></a><span class="ui-split">|</span><a href="/logout">安全退出</a>
+		</div>
+		<div class="ui-fr">
+			<a href="/user" title="我的订单">我的订单</a><span class="ui-split">|</span>
+			<span class="center">
+				<a href="/user/order" title="我的<%=siteName%>">我的<%=siteName%></a>
+				<ul class="more">
+					<li><a href="/user/set" title="账户设置">账户设置</a></li>
+				</ul>
+			</span>
+		</div>
+	<%} else{%>
+		<div class="ui-fl">
+			<span class="collect"><i>&hearts;</i>收藏<%=siteName%></span>
+			<a href="/login" title="登录">登录</a><span class="ui-split">|</span><a href="/register" title="注册">注册</a>
+		</div>
+		<div class="ui-fr">欢迎来到<%=siteName%>，<%=slogan%>!</div>
+	<%}%>
+	</div>
+</div>
+<div  class="home-logo ui-layout">
+	<h1 class="logo ui-fl"><a href="/" title="<%=siteName%>"><%=siteName%></a></h1>
+	<div class="seach ui-fr">
+		<form action="/search" method="GET">
+			<input type="text" name="name" class="ui-text" /><input type="submit" class="ui-btn" value="搜索" />
+		</form>
+	</div>
+</div>
+<ul class="home-nav ui-layout">
+	<li><a href="/" title="首页">首页</a></li>
+	<li><a href="/food" title="美食">美食</a></li>
+	<li><a href="/shop" title="餐店">餐店</a></li>
+</ul>

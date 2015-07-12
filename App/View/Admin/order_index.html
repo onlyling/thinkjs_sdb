@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/admin_head.html %>
+</head>
+<body>
+<% include ../Common/admin_nav.html %>
+<div class="admin-main">
+	<h1 class="h1"><%=title%></h1>
+	<table class="ui-table" id="foodsTable">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>订单号</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%if(order.length){%>
+				<%order.forEach(function(item){%>
+					<tr>
+						<td><%=item.id%></td>
+						<td><%=item.imei%></td>
+					</tr>
+				<%});%>
+			<%}else{%>
+				<tr id="nofoods">
+					<td colspan="5">暂时没有客户下单，刷新页面试试</td>
+				</tr>
+			<%}%>
+		</tbody>
+	</table>
+	<% include ../Common/common_pager.html %>
+</div>
+
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets//js/admin/food.min.js"></script>
+
+</body>
+</html>

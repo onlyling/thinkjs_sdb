@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/admin_head.html %>
+</head>
+<body>
+<% include ../Common/admin_nav.html %>
+<div class="admin-main">
+	<h1 class="h1"><%=title%></h1>
+	<form class="food" action="/admin/food/add" method="POST" id="addForm">
+		<ul class="ul">
+			<li>
+				<label class="hd" for="shopid">选择来源：</label>
+				<select class="ui-select" name="shopid" id="shopid">
+					<option value="">---选择餐店---</option>
+					<%shops.forEach(function(shop){%>
+					<option value="<%=shop.id%>"><%=shop.name%></option>
+					<%})%>
+				</select>
+			</li>
+			<li>
+				<label class="hd" for="name">美食名称：</label>
+				<input type="text" name="name" id="name" class="ui-text" />
+			</li>
+			<li>
+				<label class="hd" for="intro">简介：</label>
+				<input type="text" name="intro" id="intro" class="ui-text" />
+			</li>
+			<li>
+				<label class="hd" for="price">价格：</label>
+				<input type="text" name="price" id="price" class="ui-text" />
+			</li>
+			<li>
+				<label class="hd" for="sold">已售：</label>
+				<input type="text" name="sold" id="sold" class="ui-text" />
+			</li>
+			<li>
+				<label class="hd" for="setmeal">套餐详情：</label>
+				<span id="setmealList" class="setmeallist">
+					<div class="tool">
+						<input type="text" class="ui-text name" placeholder="名称" />
+						<input type="text" class="ui-text price fnNum" placeholder="价格" />
+						<input type="text" class="ui-text num fnNum" placeholder="数量" />
+						<button type="button" class="ui-btn">添加</button>
+					</div>
+				</span>
+				<input type="hidden" name="setmeal" id="setmeal" />
+			</li>
+			<li>
+				<label class="hd" for="banner">美食聚焦图：</label>
+				<input type="file" name="upBanner" id="upBanner" class="ui-text" />
+				<input type="hidden" name="banner" id="banner" />
+				<ul class="banners" id="banners"></ul>
+			</li>
+			<li>
+				<label class="hd" for="content">图片详情：</label>
+				<span>
+					<ul class="contents" id="contents"></ul>
+					<input type="file" name="upContent" id="upContent" class="ui-text" />
+					<input type="hidden" name="content" id="content">
+				</span>
+			</li>
+			<li>
+				<label class="hd"></label>
+				<input type="submit" class="ui-btn" value="确认添加" />
+			</li>
+		</ul>
+	</form>
+</div>
+
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets//js/admin/food.min.js"></script>
+
+</body>
+</html>

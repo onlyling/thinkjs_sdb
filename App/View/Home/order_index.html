@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/home_head.html %>
+</head>
+<body>
+<% include ../Common/home_header.html %>
+<div class="order ui-layout">
+	<h2 class="header">
+		<%=title%>
+	</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>餐品</th>
+				<th>单价</th>
+				<th>数量</th>
+				<th>合计</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img src="<%=order.banner.split(',')[0]%>"><%=order.name%></td>
+				<td><%=order.price%></td>
+				<td><%=order.num%></td>
+				<td><%=order.price*order.num%></td>
+			</tr>
+		</tbody>
+	</table>
+	<form id="order" action="/order/details" method="POST">
+		<input type="hidden" name="id" value="<%=order.id%>">
+		<input type="hidden" name="num" value="<%=order.num%>">
+		<input type="hidden" name="shopid" value="<%=order.shopid%>">
+		<input type="hidden" name="address" value="<%=order.address%>">
+	</form>
+	<div class="btns">
+		<span class="ui-btn" id="getPay">提交订单</span>
+	</div>
+	<div class="pay" id="pay">
+		<span class="x">&times;</span>
+		<div class="hd">选择支付方式</div>
+		<ul class="ul">
+			<li><input type="radio" name="way" value="1" id="offline"><label for="offline">线下付款</label></li>
+		</ul>
+		<div class="ui-btn" id="goPay">前往支付</div>
+	</div>
+</div>
+<% include ../Common/home_footer.html %>
+<script type="text/javascript" src="/assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/order.min.js"></script>
+</body>
+</html>

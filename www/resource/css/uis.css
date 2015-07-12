@@ -1,0 +1,131 @@
+@charset "utf-8";
+/*
+ *url(http://www.ituring.com.cn/article/49353)
+ */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{ margin:0; padding:0;}
+table{ border-collapse:collapse; border-spacing:0;}
+fieldset, img{ border:0;}
+address, caption, cite, code, dfn, em, strong, th, var{ font-style:normal; font-weight:normal;}
+ol, ul{ list-style:none;}
+caption, th { text-align:left;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-weight:normal;}
+q::before, q::after{ content:'';}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary{ display: block;}
+audio, canvas, video{ display:inline-block;}
+a{ text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent;}
+a:focus { outline:thin dotted;}
+a:active, a:hover{ outline: 0;}
+abbr[title]{ border-bottom: 1px dotted;}
+b, strong{ font-weight: bold;}
+dfn{ font-size:italic;}
+hr{ -moz-box-sizing: content-box; box-sizing: content-box; height: 0;}
+mark{ background: #ff0; color: #000;}
+code, kbd, pre, samp{ font-family: monospace, serif; font-size: 1em;}
+pre{ white-space: pre-wrap;}
+sub, sup{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup{ top: -0.5em;}
+sub{ bottom: -0.25em;}
+small{ font-size: 85%;}
+strong{ font-weight: bold;}
+em{ font-style: italic;}
+cite{ font-style: normal;}
+button, input, select, textarea{ font-family: inherit; color: inherit; font-size: 100%; margin: 0;}
+button, select{ text-transform: none;}
+button, html input[type="button"], input[type="reset"], input[type="submit"]{ -webkit-appearance: button; cursor: pointer;}
+button[disabled], html input[disabled]{ cursor: default;}
+input[type="checkbox"], input[type="radio"]{ box-sizing: border-box; padding: 0;}
+input[type="search"]{ -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration{ -webkit-appearance: none;}
+button::-moz-focus-inner, input::-moz-focus-inner{ border: 0; padding: 0;}
+textarea{ overflow: auto; vertical-align: top;}
+html{ height: 100%;}
+body{ height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch; background-color: #f1f1f1;}
+/*ui*/
+.ui-btn, .ui-dpib, span, i, label{ display: inline-block; *display: inline; *zoom: 1; *overflow: visible; font-style: normal;}
+.ui-fl{ float: left;}
+.ui-fr{ float: right;}
+.ui-layout{ width: 1200px; margin-left: auto; margin-right: auto;}
+.ui-text{ width: 150px;}
+.ui-btn{ cursor: pointer; font-family: inherit;}
+.ui-split{ vertical-align: middle; margin: 0 10px;}
+/*btn*/
+.ui-btn{ width: 200px; height: 30px; line-height: 30px; background-color: #f90; color: #fff; border: 0;}
+.ui-btn:hover{ background-color: #f60; color: #fff;}
+
+/*input*/
+.ui-text{ border: 1px solid #efefef; width: 200px; line-height: 20px; padding: 5px 8px; font-size: 14px;}
+.ui-textarea{ border: 1px solid #efefef; width: 300px; line-height: 25px; padding: 5px;}
+.ui-select{ width: 200px; line-height: 20px; padding: 5px 8px;}
+/*table*/
+.ui-table{ width: 100%; border: 1px solid #e5e5e5;}
+.ui-table thead{  background-color: #fff; line-height: 30px;}
+.ui-table tbody{ line-height: 25px;}
+.ui-table tr span{ background-color: #333; color: #fff; font-size: 12px; line-height: 15px; border-radius: 3px; padding: 2px 3px; margin:  0 5px; cursor: pointer; vertical-align: middle;}
+.ui-table tr span a{ color: #fff;}
+.ui-table th, .ui-table td{ padding-left: 20px;}
+.ui-table td{  background-color: #fff; border-top: 1px solid #e5e5e5;}
+/*pager*/
+.ui-pager{ height: 30px; line-height: 30px; padding-top: 20px;}
+.ui-pager li{ margin: 0 5px; display: inline-block; *display: inline; *zoom: 1; *overflow: visible; font-style: normal; vertical-align: middle;}
+.ui-pager li a{ display: block; background-color: #f90; color: #fff; padding: 0 10px;  border-radius: 5px;}
+.ui-pager li.active a{ background-color: #f60;}
+/*alertbox*/
+.ui-alertbox{ position: fixed; left: 50%; top: 40%; margin-left: -220px; width: 400px; padding: 20px; background-color: #fff; border: 1px solid #e5e5e5;}
+.ui-alertbox .ui-title{ position: relative; height: 30px; line-height: 30px;}
+.ui-alertbox .ui-title .x{ position: absolute; right: 0; top: 0; cursor: pointer; background-color: #f5f5f5;  width: 30px; height: 30px; line-height: 30px; text-align: center;}
+.ui-alertbox .ul li{ margin-bottom: 10px;}
+.ui-alertbox .ul label{ width: 100px; text-align: right;}
+
+/*login*/
+.login{ position: absolute; left: 50%; top: 30%; margin-left: -183px; width: 300px; padding: 20px 30px; border: 3px solid #f90; background-color: #eee;}
+.login .ul li{ margin-bottom: 20px;}
+.login .ul label{ width: 70px; text-align: right;}
+
+.admin-hd{ padding: 0 20px; height: 40px; line-height: 40px; background-color: #f90; color: #fff; text-align: right;}
+.admin-hd a{ color: #fff;}
+
+.admin-nav{ position: fixed; z-index: 0; left: 0; top: 0px; height: 100%; width: 260px; background-color: #444; color: #fff;}
+.admin-nav .item{ border-bottom: 1px dashed #f1f1f1;}
+.admin-nav .item a{ color: #fff; display: block; padding-left: 20px;}
+.admin-nav .item a:hover{ background-color: #f1f1f1; color: #000;}
+.admin-nav .item{ line-height: 40px;}
+.admin-nav .item.hd{ background-color: #f90; padding-left: 20px; border-bottom: 0;}
+
+.admin-nav .subnav{ border-left: 1px dashed #f1f1f1; margin-left: 20px;}
+.admin-nav .subnav li{ line-height: 20px; line-height: 20px;}
+.admin-nav .subnav a{ padding-left: 0; font-size: 12px; color: #f1f1f1;}
+.admin-nav .subnav a:before{ content: ' - - - '; }
+
+.admin-main{ width: 100%; padding-left: 280px; padding-top: 20px; }
+.admin-main .h1{ line-height: 35px; font-size: 24px; color: #000; font-weight: 700px;}
+.admin-main .h1 .subh1{ display: inline-block; font-size: 15px; color: #fff; background-color: #f60; margin-left: 20px; padding: 2px 3px; height: 20px; line-height: 20px; border-radius: 3px; vertical-align: middle; cursor: pointer;;}
+
+
+.user .ul .hd{ width: 160px; text-align: right;}
+.user .ul li{ margin-bottom: 10px;}
+
+.shop .ul .hd{ width: 160px; text-align: right;}
+.shop .ul li{ margin-bottom: 10px;}
+.shop .ul .img-logo{ width: 70px; height: 70px; display: block;}
+.shop .ul .img-cover{ width: 278px; height: 170px; display: block;}
+
+.food .ul .hd{ width: 160px; text-align: right;}
+.food .ul li{ margin-bottom: 10px;}
+.food .ul .setmeallist .item{ height: 25px; line-height: 25px; margin-bottom: 5px;}
+.food .ul .setmeallist span.name{ width: 190px;}
+.food .ul .setmeallist span.price{ width: 80px;}
+.food .ul .setmeallist span.num{ width: 80px;}
+.food .ul .setmeallist span.x{ background-color: #000; color: #fff; width: 25px; height: 25px; line-height: 25px; text-align: center; cursor: pointer;}
+.food .ul .setmeallist .tool input.name{ width: 150px;}
+.food .ul .setmeallist .tool input.price{ width: 50px;}
+.food .ul .setmeallist .tool input.num{ width: 50px;}
+.food .ul .setmeallist .tool .ui-btn{ width: 80px; vertical-align: middle; outline: none;}
+
+.food .ul .banners li{ position: relative; display: inline-block; *display: inline; *zoom: 1;}
+.food .ul .banners img{ width: 300px; height: 300px;}
+.food .ul .banners .x{ position: absolute; right: 0; top: 0; width: 30px; height: 30px; line-height: 30px; background-color: #000; color: #fff; text-align: center; cursor: pointer;}
+
+.food .ul .contents li{ position: relative;}
+.food .ul .contents img{ max-width: 800px;}
+.food .ul .contents .x{ position: absolute; right: -30px; top: 0; width: 30px; height: 30px; line-height: 30px; background-color: #000; color: #fff; text-align: center; cursor: pointer;}
+

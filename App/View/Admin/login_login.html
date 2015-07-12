@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<% include ../Common/admin_head.html %>
+</head>
+<body>
+<div class="login">
+	<form action="/admin/login/login" method="POST">
+		<ul class="ul">
+			<li>
+				<label for="name">账号：</label>
+				<input type="text" name="name" id="name" class="ui-text" />
+			</li>
+			<li>
+				<label for="pwd">密码：</label>
+				<input type="password" name="pwd" id="pwd" class="ui-text" />
+			</li>
+			<li>
+				<label></label>
+				<input type="submit" class="ui-btn" />
+			</li>
+		</ul>
+	</form>
+</div>
+</body>
+</html>
